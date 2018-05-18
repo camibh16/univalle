@@ -38,3 +38,13 @@ Route::patch('admin/productos/{productos}', ['as'=> 'admin.productos.update', 'u
 Route::delete('admin/productos/{productos}', ['as'=> 'admin.productos.destroy', 'uses' => 'Admin\ProductoController@destroy']);
 Route::get('admin/productos/{productos}', ['as'=> 'admin.productos.show', 'uses' => 'Admin\ProductoController@show']);
 Route::get('admin/productos/{productos}/edit', ['as'=> 'admin.productos.edit', 'uses' => 'Admin\ProductoController@edit']);
+
+
+Route::get('admin/estados', ['as'=> 'admin.estados.index', 'uses' => 'Admin\EstadoController@index']);
+Route::post('admin/estados', ['as'=> 'admin.estados.store', 'uses' => 'Admin\EstadoController@store']);
+Route::get('admin/estados/create', ['as'=> 'admin.estados.create', 'uses' => 'Admin\EstadoController@create']);
+Route::put('admin/estados/{estados}', ['as'=> 'admin.estados.update', 'uses' => 'Admin\EstadoController@update']);
+Route::patch('admin/estados/{estados}', ['as'=> 'admin.estados.update', 'uses' => 'Admin\EstadoController@update']);
+Route::delete('admin/estados/{estados}', ['as'=> 'admin.estados.destroy', 'uses' => 'Admin\EstadoController@destroy']);
+Route::get('admin/estados/{estados}', ['as'=> 'admin.estados.show', 'uses' => 'Admin\EstadoController@show']);
+Route::get('admin/estados/{estados}/edit', ['as'=> 'admin.estados.edit', 'uses' => 'Admin\EstadoController@edit']);
