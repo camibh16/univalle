@@ -33,9 +33,10 @@
 											])											
 										!!}
 											
-											<input type="hidden" name="producto_id" value="{!! Auth::user()->id !!}">
+											{{-- <input type="hidden" name="user_id" value="{!! Auth::user()->id !!}"> --}}
 											<input type="hidden" name="producto_id" value="{{$producto->id}}">
-											{{-- <input type="hidden" name="estado_id" value="1"> --}}
+											<input type="hidden" name="estados_id" value="1">
+											<input type="hidden" name="total" value="{{$producto->precio}}">
 											<input type="submit" value="Pedir" class="btn btn-info">
 
 											{{-- <a class="view-link shutter" href="comprar/{{$producto->id}}"> --}}

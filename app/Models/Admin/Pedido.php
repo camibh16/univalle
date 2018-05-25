@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Models\Admin;
+use App\User;
 
 use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -25,8 +26,8 @@ class Pedido extends Model
 
     public $fillable = [
         'users_id',
-        'productos_id'
-        'estados_id'
+        'productos_id',
+        'estados_id',
         'total'
     ];
 
@@ -37,8 +38,8 @@ class Pedido extends Model
      */
     protected $casts = [
         'users_id' => 'integer',
-        'productos_id' => 'integer'
-        'estados_id' => 'integer'
+        'productos_id' => 'integer',
+        'estados_id' => 'integer',
         'total' => 'decimal'
     ];
 
@@ -54,7 +55,7 @@ class Pedido extends Model
 
     public function usuarios()
     {
-        return $this->belongsTo(User::class,'users_id');
+        return $this->belongsTo('App\User','users_id');
     }
 
     public function productos()

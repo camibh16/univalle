@@ -11,7 +11,10 @@ use Flash;
 use Prettus\Repository\Criteria\RequestCriteria;
 use Response;
 use App\Models\Admin\Pedido;
-use App\Http\Controllers\Auth;
+use App\Models\Admin\Estado;
+use Illuminate\Support\Facades\Auth;
+// use App\Http\Controllers\Auth;
+// use App\Auth;
 
 class PedidoController extends AppBaseController
 {
@@ -57,19 +60,40 @@ class PedidoController extends AppBaseController
      */
     public function store(CreatePedidoRequest $request)
     {
-        $input = $request->all();
-
-        Pedido::create([
-            "users_id" => $request->user()->id;
- 
-        ]);
+        
 
         // $pedido = $this->pedidoRepository->create($input);
 
-        Flash::success('Pedido saved successfully.');
+        // Flash::success(Auth->User()->id);
 
         return redirect(route('admin.pedidos.index'));
     }
+
+
+
+
+
+    public function prueba(Request $request)
+    {
+        $pedido = new Pedido();
+        $user = \Auth::user();
+
+        $pedido->users_id =$user->id;
+        $pedido->productos_id = $request->input('producto_id');
+        $pedido->estados_id = $request->input('estados_id');
+        $pedido->total = $request->input('total');
+        $pedido->save();
+
+        // $pedido = $this->pedidoRepository->create($input);
+
+        // Flash::success('Pedido saved successfully.');
+
+        // return redirect(route('admin.pedidos.index'));
+    }
+
+
+
+
 
     /**
      * Display the specified Pedido.
@@ -107,8 +131,9 @@ class PedidoController extends AppBaseController
 
             return redirect(route('admin.pedidos.index'));
         }
+        $estados = Estado::pluck('nombre','id');
 
-        return view('admin.pedidos.edit')->with('pedido', $pedido);
+        return view('admin.pedidos.edit',compact('estados'))->with('pedido', $pedido);
     }
 
     /**

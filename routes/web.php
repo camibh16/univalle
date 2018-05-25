@@ -26,7 +26,7 @@ Route::get('/productos/{id}', ['uses'=> 'ProductosController@producto'])->name('
 // Route::get('productos/comprar/{id}', ['uses'=> 'HomeController@comprar'])->name('comprar');
 
 
-Route::post('comprar/', ['as'=> 'admin.pedidos.store', 'uses' => 'Admin\PedidoController@store']);
+Route::post('comprar/', ['as'=> 'admin.pedidos.store', 'uses' => 'Admin\PedidoController@prueba']);
 
 
 Route::get('admin/empresas', ['as'=> 'admin.empresas.index', 'uses' => 'Admin\EmpresaController@index']);

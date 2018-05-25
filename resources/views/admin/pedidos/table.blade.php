@@ -3,6 +3,7 @@
         <tr>
             <th>Usuarios</th>
         <th>Productos</th>
+        <th>Estado</th>
         <th>Total</th>
             <th colspan="3">Acciones</th>
         </tr>
@@ -10,8 +11,9 @@
     <tbody>
     @foreach($pedidos as $pedido)
         <tr>
-            <td>{!! $pedido->users_id !!}</td>
+            <td>{!! $pedido->usuarios->name !!}</td>
             <td>{!! $pedido->productos_id !!}</td>
+            <td>{!! $pedido->estados->nombre !!}</td>
             <td>{!! $pedido->total !!}</td>
             <td>
                 {!! Form::open(['route' => ['admin.pedidos.destroy', $pedido->id], 'method' => 'delete']) !!}
