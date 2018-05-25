@@ -11,7 +11,7 @@
             <div class="box-body">
                 <div class="row" style="padding-left: 20px">
                     @include('admin.empresas.show_fields')
-                    <a href="{!! route('admin.empresas.index') !!}" class="btn btn-default">Back</a>
+                    <a href="{!! route('admin.empresas.index') !!}" class="btn btn-default">Volver</a>
                 </div>
             </div>
         </div>

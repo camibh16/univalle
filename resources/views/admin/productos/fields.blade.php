@@ -18,12 +18,12 @@
 
 <!-- Empresa Id Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('empresa_id', 'Empresa Id:') !!}
+    {!! Form::label('empresa_id', 'Empresa:') !!}
     {!! Form::select('empresa_id',$empresas, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('admin.productos.index') !!}" class="btn btn-default">Cancel</a>
+    <a href="{!! route('admin.productos.index') !!}" class="btn btn-default">Cancelar</a>
 </div>

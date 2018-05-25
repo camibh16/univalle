@@ -59,7 +59,7 @@ class EmpresaController extends AppBaseController
 
         $empresa = $this->empresaRepository->create($input);
 
-        Flash::success('Empresa saved successfully.');
+        Flash::success('Empresa guardada.');
 
         return redirect(route('admin.empresas.index'));
     }
@@ -76,7 +76,7 @@ class EmpresaController extends AppBaseController
         $empresa = $this->empresaRepository->findWithoutFail($id);
 
         if (empty($empresa)) {
-            Flash::error('Empresa not found');
+            Flash::error('Empresa no encontrada');
 
             return redirect(route('admin.empresas.index'));
         }
@@ -96,7 +96,7 @@ class EmpresaController extends AppBaseController
         $empresa = $this->empresaRepository->findWithoutFail($id);
 
         if (empty($empresa)) {
-            Flash::error('Empresa not found');
+            Flash::error('Empresa no encontrada');
 
             return redirect(route('admin.empresas.index'));
         }
@@ -117,14 +117,14 @@ class EmpresaController extends AppBaseController
         $empresa = $this->empresaRepository->findWithoutFail($id);
 
         if (empty($empresa)) {
-            Flash::error('Empresa not found');
+            Flash::error('Empresa no encontrada');
 
             return redirect(route('admin.empresas.index'));
         }
 
         $empresa = $this->empresaRepository->update($request->all(), $id);
 
-        Flash::success('Empresa updated successfully.');
+        Flash::success('Empresa actualizada.');
 
         return redirect(route('admin.empresas.index'));
     }
@@ -141,14 +141,14 @@ class EmpresaController extends AppBaseController
         $empresa = $this->empresaRepository->findWithoutFail($id);
 
         if (empty($empresa)) {
-            Flash::error('Empresa not found');
+            Flash::error('Empresa no encontrada');
 
             return redirect(route('admin.empresas.index'));
         }
 
         $this->empresaRepository->delete($id);
 
-        Flash::success('Empresa deleted successfully.');
+        Flash::success('Empresa borrada.');
 
         return redirect(route('admin.empresas.index'));
     }

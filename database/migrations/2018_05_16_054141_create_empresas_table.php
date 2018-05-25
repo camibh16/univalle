@@ -18,7 +18,7 @@ class CreateEmpresasTable extends Migration
             $table->string('name');
             $table->string('url')->default('');
             $table->string('eslogan');
-            $table->string('img');
+            $table->text('img');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -58,7 +58,7 @@ class Producto extends Model
 
     public function Empresa()
     {
-        return $this->hasOne('App\Models\Admin\Empresa');
+        return $this->belongsTo('App\Models\Admin\Empresa','empresa_id');
     }
     
 }

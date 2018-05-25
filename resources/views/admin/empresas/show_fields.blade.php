@@ -6,7 +6,7 @@
 
 <!-- Name Field -->
 <div class="form-group">
-    {!! Form::label('name', 'Name:') !!}
+    {!! Form::label('name', 'Nombre:') !!}
     <p>{!! $empresa->name !!}</p>
 </div>
 
@@ -24,7 +24,7 @@
 
 <!-- Img Field -->
 <div class="form-group">
-    {!! Form::label('img', 'Img:') !!}
+    {!! Form::label('img', 'Imagen:') !!}
     <p>{!! $empresa->img !!}</p>
 </div>
 

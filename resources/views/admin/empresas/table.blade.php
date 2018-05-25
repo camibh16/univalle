@@ -1,11 +1,11 @@
 <table class="table table-responsive" id="empresas-table">
     <thead>
         <tr>
-            <th>Name</th>
+            <th>Nombre</th>
         <th>Url</th>
         <th>Eslogan</th>
         <th>Img</th>
-            <th colspan="3">Action</th>
+            <th colspan="3">Acciones</th>
         </tr>
     </thead>
     <tbody>

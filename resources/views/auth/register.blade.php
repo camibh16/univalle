@@ -48,7 +48,7 @@
             {!! csrf_field() !!}
 
             <div class="form-group has-feedback{{ $errors->has('name') ? ' has-error' : '' }}">
-                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Full Name">
+                <input type="text" class="form-control" name="name" value="{{ old('name') }}" placeholder="Nombre Completo">
                 <span class="glyphicon glyphicon-user form-control-feedback"></span>
 
                 @if ($errors->has('name'))
@@ -69,8 +69,33 @@
                 @endif
             </div>
 
+            
+            <div class="form-group has-feedback{{ $errors->has('direccion') ? ' has-error' : '' }}">
+                <input type="text" class="form-control" name="direccion" value="{{ old('direccion') }}" placeholder="Direcion">
+                <span class="glyphicon glyphicon-home form-control-feedback"></span>
+
+                @if ($errors->has('direccion'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('direccion') }}</strong>
+                    </span>
+                @endif
+            </div>
+
+
+            <div class="form-group has-feedback{{ $errors->has('telefono') ? ' has-error' : '' }}">
+                <input type="text" class="form-control" name="telefono" value="{{ old('telefono') }}" placeholder="Telefono">
+                <span class="glyphicon glyphicon-phone form-control-feedback"></span>
+
+                @if ($errors->has('telefono'))
+                    <span class="help-block">
+                        <strong>{{ $errors->first('telefono') }}</strong>
+                    </span>
+                @endif
+            </div>
+
+
             <div class="form-group has-feedback{{ $errors->has('password') ? ' has-error' : '' }}">
-                <input type="password" class="form-control" name="password" placeholder="Password">
+                <input type="password" class="form-control" name="password" placeholder="Contraseña">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 
                 @if ($errors->has('password'))
@@ -81,7 +106,7 @@
             </div>
 
             <div class="form-group has-feedback{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
-                <input type="password" name="password_confirmation" class="form-control" placeholder="Confirm password">
+                <input type="password" name="password_confirmation" class="form-control" placeholder="Confirmar Contraseña">
                 <span class="glyphicon glyphicon-lock form-control-feedback"></span>
 
                 @if ($errors->has('password_confirmation'))

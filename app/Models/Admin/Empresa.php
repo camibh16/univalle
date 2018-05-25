@@ -55,5 +55,10 @@ class Empresa extends Model
         'img' => 'required'
     ];
 
+    public function productos()
+    {
+        return $this->hasMany('App\Models\Admin\Producto');
+    }
+
     
 }

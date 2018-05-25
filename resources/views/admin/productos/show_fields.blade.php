@@ -24,7 +24,7 @@
 
 <!-- Empresa Id Field -->
 <div class="form-group">
-    {!! Form::label('empresa_id', 'Empresa Id:') !!}
+    {!! Form::label('empresa_id', 'Empresa:') !!}
     <p>{!! $producto->empresa_id !!}</p>
 </div>
 

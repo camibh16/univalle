@@ -6,7 +6,7 @@
         
         <th>Empresa Id</th>
         <th>Imagen</th>
-            <th colspan="3">Action</th>
+            <th colspan="3">Acciones</th>
         </tr>
     </thead>
     <tbody>
