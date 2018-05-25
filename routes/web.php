@@ -66,5 +66,6 @@ Route::get('admin/pedidos/create', ['as'=> 'admin.pedidos.create', 'uses' => 'Ad
 Route::put('admin/pedidos/{pedidos}', ['as'=> 'admin.pedidos.update', 'uses' => 'Admin\PedidoController@update']);
 Route::patch('admin/pedidos/{pedidos}', ['as'=> 'admin.pedidos.update', 'uses' => 'Admin\PedidoController@update']);
 Route::delete('admin/pedidos/{pedidos}', ['as'=> 'admin.pedidos.destroy', 'uses' => 'Admin\PedidoController@destroy']);
+Route::delete('pedidos/{pedidos2}', ['as'=> 'pedidos.destroy2', 'uses' => 'PedidosController@destroy2']);
 Route::get('admin/pedidos/{pedidos}', ['as'=> 'admin.pedidos.show', 'uses' => 'Admin\PedidoController@show']);
 Route::get('admin/pedidos/{pedidos}/edit', ['as'=> 'admin.pedidos.edit', 'uses' => 'Admin\PedidoController@edit']);

@@ -59,7 +59,7 @@ class EstadoController extends AppBaseController
 
         $estado = $this->estadoRepository->create($input);
 
-        Flash::success('Estado saved successfully.');
+        Flash::success('Estado guardado.');
 
         return redirect(route('admin.estados.index'));
     }
@@ -76,7 +76,7 @@ class EstadoController extends AppBaseController
         $estado = $this->estadoRepository->findWithoutFail($id);
 
         if (empty($estado)) {
-            Flash::error('Estado not found');
+            Flash::error('Estado no encontrado');
 
             return redirect(route('admin.estados.index'));
         }
@@ -96,7 +96,7 @@ class EstadoController extends AppBaseController
         $estado = $this->estadoRepository->findWithoutFail($id);
 
         if (empty($estado)) {
-            Flash::error('Estado not found');
+            Flash::error('Estado no encontrado');
 
             return redirect(route('admin.estados.index'));
         }
@@ -117,14 +117,14 @@ class EstadoController extends AppBaseController
         $estado = $this->estadoRepository->findWithoutFail($id);
 
         if (empty($estado)) {
-            Flash::error('Estado not found');
+            Flash::error('Estado no encontrado');
 
             return redirect(route('admin.estados.index'));
         }
 
         $estado = $this->estadoRepository->update($request->all(), $id);
 
-        Flash::success('Estado updated successfully.');
+        Flash::success('Estado actualizado.');
 
         return redirect(route('admin.estados.index'));
     }
@@ -141,14 +141,14 @@ class EstadoController extends AppBaseController
         $estado = $this->estadoRepository->findWithoutFail($id);
 
         if (empty($estado)) {
-            Flash::error('Estado not found');
+            Flash::error('Estado no encontrado');
 
             return redirect(route('admin.estados.index'));
         }
 
         $this->estadoRepository->delete($id);
 
-        Flash::success('Estado deleted successfully.');
+        Flash::success('Estado eliminado.');
 
         return redirect(route('admin.estados.index'));
     }

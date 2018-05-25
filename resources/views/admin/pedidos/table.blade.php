@@ -2,6 +2,7 @@
     <thead>
         <tr>
             <th>Usuarios</th>
+            <th>Direccion</th>
         <th>Productos</th>
         <th>Estado</th>
         <th>Total</th>
@@ -12,7 +13,8 @@
     @foreach($pedidos as $pedido)
         <tr>
             <td>{!! $pedido->usuarios->name !!}</td>
-            <td>{!! $pedido->productos_id !!}</td>
+            <td>{!! $pedido->usuarios->direccion !!}</td>
+            <td>{!! $pedido->productos->name!!}</td>
             <td>{!! $pedido->estados->nombre !!}</td>
             <td>{!! $pedido->total !!}</td>
             <td>

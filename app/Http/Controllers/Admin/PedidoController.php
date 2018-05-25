@@ -112,7 +112,7 @@ class PedidoController extends AppBaseController
         $pedido = $this->pedidoRepository->findWithoutFail($id);
 
         if (empty($pedido)) {
-            Flash::error('Pedido not found');
+            Flash::error('Pedido no encontrado');
 
             return redirect(route('admin.pedidos.index'));
         }
@@ -132,7 +132,7 @@ class PedidoController extends AppBaseController
         $pedido = $this->pedidoRepository->findWithoutFail($id);
 
         if (empty($pedido)) {
-            Flash::error('Pedido not found');
+            Flash::error('Pedido no encontrado');
 
             return redirect(route('admin.pedidos.index'));
         }
@@ -154,14 +154,14 @@ class PedidoController extends AppBaseController
         $pedido = $this->pedidoRepository->findWithoutFail($id);
 
         if (empty($pedido)) {
-            Flash::error('Pedido not found');
+            Flash::error('Pedido no encontrado');
 
             return redirect(route('admin.pedidos.index'));
         }
 
         $pedido = $this->pedidoRepository->update($request->all(), $id);
 
-        Flash::success('Pedido updated successfully.');
+        Flash::success('Pedido actualizado.');
 
         return redirect(route('admin.pedidos.index'));
     }
@@ -178,20 +178,20 @@ class PedidoController extends AppBaseController
         $pedido = $this->pedidoRepository->findWithoutFail($id);
 
         if (empty($pedido)) {
-            Flash::error('Pedido not found');
+            Flash::error('Pedido no encontrado');
 
             return redirect(route('admin.pedidos.index'));
         }
 
         $this->pedidoRepository->delete($id);
 
-        Flash::success('Pedido deleted successfully.');
+        Flash::success('Pedido borrado.');
 
         return redirect(route('admin.pedidos.index'));
     }
 
-     public function pedidosU()
-    {
 
-    }
+    
+
+    
 }

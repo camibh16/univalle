@@ -60,5 +60,11 @@ class Producto extends Model
     {
         return $this->belongsTo('App\Models\Admin\Empresa','empresa_id');
     }
+
+
+      public function Pedidos()
+    {
+        return $this->belongsTo(Pedido::class,'empresa_id');
+    }
     
 }

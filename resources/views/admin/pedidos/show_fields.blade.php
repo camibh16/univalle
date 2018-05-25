@@ -7,19 +7,31 @@
 <!-- Users Id Field -->
 <div class="form-group">
     {!! Form::label('users_id', 'Usuario:') !!}
-    <p>{!! $pedido->users_id !!}</p>
+    <p>{!! $pedido->usuarios->name !!}</p>
+</div>
+
+<!-- Users Id Field -->
+<div class="form-group">
+    {!! Form::label('users_id', 'Direccion:') !!}
+    <p>{!! $pedido->usuarios->direccion !!}</p>
 </div>
 
 <!-- Productos Id Field -->
 <div class="form-group">
     {!! Form::label('productos_id', 'Producto:') !!}
-    <p>{!! $pedido->productos_id !!}</p>
+    <p>{!! $pedido->productos->name !!}</p>
+</div>
+
+<!-- Productos Id Field -->
+<div class="form-group">
+    {!! Form::label('estados_id', 'Estado:') !!}
+    <p>{!! $pedido->estados->nombre !!}</p>
 </div>
 
 <!-- Total Field -->
 <div class="form-group">
-    {!! Form::label('productos_id', 'Producto:') !!}
-    <p>{!! $pedido->productos_id !!}</p>
+    {!! Form::label('total', 'Total:') !!}
+    <p>{!! $pedido->total !!}</p>
 </div>
 
 <!-- Created At Field -->
