@@ -44,7 +44,8 @@
 
 		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 		      	<ul class="nav navbar-nav nav-main">
-		        	<li class="active"><a href="/">INICIO</a></li>
+		        	<li class=""><a href="/">INICIO</a></li>
+		        	<li class=""><a href="/pedidos">Mis pedidos</a></li>
 					<!--<li><a href="products.html">SHOP</a></li>-->
 					{{-- <li><a href="blog.html">BLOG</a></li> --}}
 					{{-- <li>
@@ -90,7 +91,7 @@
 						   	
 
 						   </li>
-						    <li><a  href="#">Perfil</a></li>
+						    {{-- <li><a  href="#">Perfil</a></li> --}}
 						    
 						</ul>
 					</li> <!-- End of /.dropdown -->

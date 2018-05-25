@@ -58,15 +58,16 @@ class PedidoController extends AppBaseController
      *
      * @return Response
      */
-    public function store(CreatePedidoRequest $request)
+    public function store()
     {
-        
+         $pedidos = Pedido::all()->where('users_id', Auth::user()->id);
+        return view('web.taz.pedidos',compact('pedidos'));
 
-        // $pedido = $this->pedidoRepository->create($input);
+        // // $pedido = $this->pedidoRepository->create($input);
 
-        // Flash::success(Auth->User()->id);
+        // // Flash::success(Auth->User()->id);
 
-        return redirect(route('admin.pedidos.index'));
+        // return redirect(route('admin.pedidos.index'));
     }
 
 
@@ -83,6 +84,10 @@ class PedidoController extends AppBaseController
         $pedido->estados_id = $request->input('estados_id');
         $pedido->total = $request->input('total');
         $pedido->save();
+
+        Flash::success('Pedido Realizado con exito !!!');
+
+        return redirect(route('pedidos'));
 
         // $pedido = $this->pedidoRepository->create($input);
 
@@ -183,5 +188,10 @@ class PedidoController extends AppBaseController
         Flash::success('Pedido deleted successfully.');
 
         return redirect(route('admin.pedidos.index'));
+    }
+
+     public function pedidosU()
+    {
+
     }
 }

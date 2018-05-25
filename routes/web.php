@@ -20,6 +20,7 @@ Auth::routes();
 
 Route::get('/admin', 'HomeController@index');
 Route::get('/home', 'HomeController@home');
+Route::get('/pedidos', ['uses'=> 'Admin\PedidoController@store'])->name('pedidos');
 Route::get('/', 'HomeController@inicio');
 // Route::get('/productos', 'HomeController@productos');
 Route::get('/productos/{id}', ['uses'=> 'ProductosController@producto'])->name('producto');

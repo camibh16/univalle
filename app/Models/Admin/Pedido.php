@@ -79,6 +79,8 @@ class Pedido extends Model
     //     $productos_id = Producto::findOrFail($id);
     // }
 
+   
+
 
 
 }
