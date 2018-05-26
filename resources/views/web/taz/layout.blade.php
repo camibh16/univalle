@@ -115,7 +115,7 @@
 
 <!-- FOOTER Start
     ================================================== -->
-
+<div style="padding-top: 150px;"></div>
 	<footer>
 		<div class="container">
 			<div class="row">

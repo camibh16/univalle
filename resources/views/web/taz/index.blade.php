@@ -54,9 +54,12 @@
 
             </div>
         </div>
+
                         {{-- <hr class="col-md-12"> --}}
                     
                             @endforeach
+
+                           
                             
                             {{-- <div class="col-sm-6 col-md-4">
                                 <div class="thumbnail">
@@ -131,5 +134,5 @@
         </div> <!-- End Of /.Container -->
     </section>  <!-- End of Section --> --}}
     
-
+ <div style="padding-top: 40px;"></div>
 @endsection

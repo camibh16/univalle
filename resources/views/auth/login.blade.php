@@ -34,7 +34,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/home') }}"><b>InfyOm </b>Generator</a>
+        <a href="{{ url('/home') }}"><b>Domicilios Buenaventura</a>
     </div>
 
     <!-- /.login-logo -->
@@ -66,22 +66,22 @@
             </div>
             <div class="row">
                 <div class="col-xs-8">
-                    <div class="checkbox icheck">
+                    {{-- <div class="checkbox icheck">
                         <label>
                             <input type="checkbox" name="remember"> Remember Me
                         </label>
-                    </div>
+                    </div> --}}
                 </div>
                 <!-- /.col -->
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Ingresar</button>
                 </div>
                 <!-- /.col -->
             </div>
         </form>
 
-        <a href="{{ url('/password/reset') }}">I forgot my password</a><br>
-        <a href="{{ url('/register') }}" class="text-center">Register a new membership</a>
+        <a href="{{ url('/password/reset') }}">He olvidado mi contraseña</a><br>
+        <a href="{{ url('/register') }}" class="text-center">Registrarme</a>
 
     </div>
     <!-- /.login-box-body -->
